@@ -3,49 +3,15 @@
     alert("Bạn nhập sai mật khẩu, vui lòng nhập lại!");
   </script>
 <?php endif; ?>
+
 <?php if (isset($data["showLogin"]) && $data["showLogin"] === true): ?>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        showForm('login');
-      });
-    </script>
-  <?php endif; ?>   
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <title>Rap Phim</title>
-  <link rel="stylesheet" href="/RAPPHIM/Public/CSS/login.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    .tab-buttons {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .tab-buttons button {
-      padding: 10px 20px;
-      margin: 0 5px;
-      border: none;
-      background-color: #e50914;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    .tab-buttons button.active {
-      background-color: #ff1f1f;
-    }
-    .form-section {
-      display: none;
-    }
-    .form-section.active {
-      display: block;
-    }
-  </style>
-</head>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      showForm('login');
+    });
+  </script>
+<?php endif; ?>
+
 <?php if (isset($data["status"])): ?>
   <div id="messageBox" style="
     background-color: <?php echo (strpos($data['status'], 'thành công') !== false) ? '#28a745' : '#ff4d4d'; ?>;
@@ -60,15 +26,19 @@
   ">
     <?php echo $data["status"]; ?>
   </div>
-
-  <script>
-    // Tự động ẩn sau 3 giây
-    setTimeout(() => {
-      const box = document.getElementById('messageBox');
-      if (box) box.style.display = 'none';
-    }, 3000);
-  </script>
 <?php endif; ?>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Rap Phim</title>
+  <link rel="stylesheet" href="/RAPPHIM/Public/CSS/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
 <body>
   <div class="container">
     <div class="tab-buttons">
@@ -115,23 +85,7 @@
       </form>
     </div>
   </div>
- 
 
-  <script>
-    function showForm(formType) {
-      document.getElementById('loginForm').classList.remove('active');
-      document.getElementById('registerForm').classList.remove('active');
-      document.getElementById('loginTab').classList.remove('active');
-      document.getElementById('registerTab').classList.remove('active');
-
-      if (formType === 'login') {
-        document.getElementById('loginForm').classList.add('active');
-        document.getElementById('loginTab').classList.add('active');
-      } else {
-        document.getElementById('registerForm').classList.add('active');
-        document.getElementById('registerTab').classList.add('active');
-      }
-    }
-  </script>
+  <script src="/RAPPHIM/Public/JS/login.js"></script>
 </body>
 </html>

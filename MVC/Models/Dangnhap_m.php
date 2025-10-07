@@ -6,7 +6,9 @@ class Dangnhap_m extends connectDB {
         $dl = mysqli_query($this->con, $sql);
         if (mysqli_num_rows($dl) > 0) {
             $row = mysqli_fetch_assoc($dl);
-            if (password_verify($matkhau, $row['matKhau'])) {
+
+            // Kiểm tra cả 2 trường hợp: mã hóa hoặc thường
+            if (password_verify($matkhau, $row['matKhau']) || $matkhau == $row['matKhau']) {
                 return true;
             }
         }
@@ -18,7 +20,9 @@ class Dangnhap_m extends connectDB {
         $dl = mysqli_query($this->con, $sql);
         if (mysqli_num_rows($dl) > 0) {
             $row = mysqli_fetch_assoc($dl);
-            if (password_verify($matkhau, $row['matKhau'])) {
+
+            // Kiểm tra cả 2 trường hợp
+            if (password_verify($matkhau, $row['matKhau']) || $matkhau == $row['matKhau']) {
                 return true;
             }
         }
@@ -30,7 +34,9 @@ class Dangnhap_m extends connectDB {
         $dl = mysqli_query($this->con, $sql);
         if (mysqli_num_rows($dl) > 0) {
             $row = mysqli_fetch_assoc($dl);
-            if (password_verify($matkhau, $row['matKhau'])) {
+
+            // Kiểm tra cả 2 trường hợp
+            if (password_verify($matkhau, $row['matKhau']) || $matkhau == $row['matKhau']) {
                 return true;
             }
         }
