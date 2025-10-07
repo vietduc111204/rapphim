@@ -1,4 +1,4 @@
-ư<?php
+<?php
 class Dangnhap_m extends connectDB {
 
     public function dangnhapKhachHang($email, $matkhau) {
