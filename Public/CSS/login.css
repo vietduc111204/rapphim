@@ -1,0 +1,171 @@
+/* Toàn bộ trang */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('/RAPPHIM/Public/img/2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Khung chính */
+.container {
+  width: 100%;
+  max-width: 480px;
+  background: transparent;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.title {
+  text-align: center;
+  color: #e50914;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+.tab-buttons {
+  display: flex;
+  gap: 10px; /* khoảng cách giữa 2 nút */
+  margin-bottom: 25px;
+}
+
+.tab-buttons button {
+  flex: 1; /* mỗi nút chiếm đều không gian */
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.tab-buttons button.active {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  box-shadow: inset 0 -3px 0 #fff; /* tạo gạch chân trắng bên trong */
+}
+
+.btn {
+  width: 100%; /* căn đều với tab-buttons */
+  padding: 12px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Nhóm input */
+.input-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-div .i {
+  width: 30px;
+  text-align: center;
+  color: #e50914;
+  font-size: 18px;
+}
+
+.input-div .div {
+  flex: 1;
+}
+
+.input {
+  width: 90%;
+  padding: 12px 10px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #333;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #e50914;
+  outline: none;
+}
+
+/* CAPTCHA */
+.captcha-box {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.captcha-code {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  background: #eee;
+  padding: 10px;
+  border-radius: 6px;
+  display: inline-block;
+  color: #e50914;
+}
+
+.btn:hover {
+  background: #ff1f1f;
+}
+
+.btn:active {
+  color: #000000;
+}
+
+.login-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Link quên mật khẩu */
+a {
+  color: #666;
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e50914;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .tab-buttons button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
