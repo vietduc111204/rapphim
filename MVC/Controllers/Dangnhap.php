@@ -1,9 +1,13 @@
 <?php
-class Dangnhap extends controller {
+class Dangnhap extends Controller {
     public $dn;
 
     function __construct() {
         $this->dn = $this->model('Dangnhap_m');
+        // Đảm bảo session đã bật
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
     }
 
     function Get_data() {
@@ -17,6 +21,7 @@ class Dangnhap extends controller {
             $email = $_POST["Email"];
             $matkhau = $_POST["matKhau"];
 
+            // ---- KHÁCH HÀNG ----
             if ($this->dn->dangnhapKhachHang($email, $matkhau)) {
                 $this->view('Masterlayout', [
                     'page' => 'HomeKhachhang_v'
@@ -36,6 +41,15 @@ class Dangnhap extends controller {
                 ]);
             }
         }
+    }
+
+    function dangxuat() {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        session_destroy();
+        header("Location: http://localhost/rapphim/home");
+        exit;
     }
 }
 ?>
