@@ -1,0 +1,387 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font tiêu đề */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+
+/* Header - Thanh điều hướng */
+.navbar {
+    background-color: #d90429;
+    padding: 15px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-left,
+.nav-right {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-left li a,
+.nav-right li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-left li a:hover,
+.nav-right li a:hover {
+    color: #ffdd57;
+}
+
+/* Banner khuyến mãi */
+.banner {
+    width: 100%;
+    background-color: #1c1c1c;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Nội dung chính */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 40px 60px;
+    background-color: #2c3e50;
+    gap: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.poster-left,
+.poster-right {
+    width: 15%;
+}
+
+.poster-left img,
+.poster-right img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.poster-left img:hover,
+.poster-right img:hover {
+    transform: scale(1.05);
+}
+
+/* Phần phim nổi bật */
+.featured-movie {
+    width: 70%;
+    text-align: center;
+}
+
+.featured-movie h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #d90429;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.featured-movie p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d90429;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a0001c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Movie Selection */
+.movie-selection,
+.event-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.movie-selection h2,
+.event-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffdd57;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.slider-track,
+.slider-track-event {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.movie-card,
+.event-card {
+    position: relative;
+    min-width: 250px;
+    max-width: 250px;
+    margin: 0 15px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    z-index: 0;
+}
+
+.event-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    z-index: 0;
+}
+
+.movie-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    z-index: 2;
+}
+
+.movie-card:hover,
+.event-card:hover {
+    transform: scale(1.03);
+}
+
+/* Overlay chứa nút */
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.movie-card:hover .overlay,
+.event-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Nút mua vé / xem chi tiết */
+.btn-buy {
+    padding: 12px 24px;
+    background-color: #d90429;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.btn-buy:hover {
+    background-color: #a0001c;
+}
+
+/* Nút điều hướng slider */
+.prev, .next,
+.prev-event, .next-event {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #d90429;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover,
+.prev-event:hover, .next-event:hover {
+    background-color: #a0001c;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+.prev-event { left: 0; }
+.next-event { right: 0; }
+
+.event-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #1c1c1c;
+    padding: 40px 60px;
+    gap: 30px;
+}
+
+.event-wrapper .poster-left,
+.event-wrapper .poster-right {
+    width: 15%;
+}
+
+.event-wrapper .poster-left img,
+.event-wrapper .poster-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.event-wrapper .poster-left img:hover,
+.event-wrapper .poster-right img:hover {
+    transform: scale(1.05);
+}
+
+.event-section {
+    width: 70%;
+    text-align: center;
+    color: #fff;
+}
+
+/* Animation khi load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .poster-left,
+    .poster-right {
+        display: none;
+    }
+
+    .featured-movie {
+        width: 90%;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .slider-track,
+    .slider-track-event {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .movie-card,
+    .event-card {
+        margin-bottom: 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    .event-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.event-wrapper .poster-left,
+.event-wrapper .poster-right {
+    display: none;
+}
+
+.event-section {
+    width: 100%;
+}
+}
