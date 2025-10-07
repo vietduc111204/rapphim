@@ -16,8 +16,13 @@
             <li><a href="#">Vé & Ưu Đãi</a></li>
             <li><a href="#">Cultureplex</a></li>
         </ul>
-        <ul class="nav-right">
-            <li><a href="#">Đăng Nhập/Đăng Ký</a></li>
+       <ul class="nav-right">
+            <?php if (isset($_SESSION['user'])): ?>
+                <li>Xin chào, <?php echo $_SESSION['user']['ten']; ?></li>
+                <li><a href="http://localhost/rapphim/Dangnhap/dangxuat">Đăng xuất</a></li>
+            <?php else: ?>
+                <li><a href="http://localhost/rapphim/Dangnhap">Đăng Nhập/Đăng Ký</a></li>
+            <?php endif; ?>
         </ul>
     </div>
 </nav>
