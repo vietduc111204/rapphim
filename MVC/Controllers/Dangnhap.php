@@ -4,10 +4,6 @@ class Dangnhap extends Controller {
 
     function __construct() {
         $this->dn = $this->model('Dangnhap_m');
-        // Đảm bảo session đã bật
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
     }
 
     function Get_data() {
