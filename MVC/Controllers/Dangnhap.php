@@ -25,6 +25,10 @@ class Dangnhap extends controller {
                 $this->view('Masterlayout', [
                     'page' => 'HomeNhanvien_v'
                 ]);
+            } elseif ($this->dn->dangnhapQuanly($email, $matkhau)) {
+                $this->view('Masterlayout', [
+                    'page' => 'HomeNhanvien_v'
+                ]);
             } else {
                 $this->view('space', [
                     'page' => 'Dangnhap_v',
