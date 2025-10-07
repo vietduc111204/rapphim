@@ -1,5 +1,5 @@
 <?php
-class Dangky extends controller {
+class Dangky extends Controller {
 
     public $dk;
 
@@ -7,12 +7,14 @@ class Dangky extends controller {
         $this->dk = $this->model("Dangky_m");
     }
 
+    // Trang mặc định (hiển thị form đăng ký / đăng nhập)
     public function index() {
         $this->view("space", [
             "page" => "Dangnhap_v"
         ]);
     }
 
+    // Xử lý đăng ký
     public function dangky() {
         if (isset($_POST['dangky'])) {
             $hoten = trim($_POST['Hoten']);
@@ -20,6 +22,7 @@ class Dangky extends controller {
             $sdt = trim($_POST['Sdt']);
             $matkhau = trim($_POST['matKhau']);
 
+            // Kiểm tra email đã tồn tại
             if ($this->dk->checkEmail($email)) {
                 $this->view("space", [
                     "page" => "Dangnhap_v",
@@ -28,8 +31,10 @@ class Dangky extends controller {
                 return;
             }
 
+            // Gọi model để lưu dữ liệu
             $result = $this->dk->insertTaiKhoan($hoten, $email, $sdt, $matkhau);
 
+            // Xử lý kết quả
             if ($result) {
                 $this->view("space", [
                     "page" => "Dangnhap_v",
