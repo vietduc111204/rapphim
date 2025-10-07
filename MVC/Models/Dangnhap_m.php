@@ -36,15 +36,5 @@ class Dangnhap_m extends connectDB {
         }
         return false;
     }
-
-    public function dangnhapQuanly($email, $matkhau) {
-        $sql = "SELECT * FROM quanly WHERE Email='$email' AND matKhau='$matkhau'";
-        $dl = mysqli_query($this->con, $sql);
-        $kq = false;
-        if (mysqli_num_rows($dl) > 0) {
-            $kq = true;
-        }
-        return $kq;
-    }
 }
 ?>

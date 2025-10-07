@@ -23,18 +23,54 @@ class Dangnhap extends Controller {
 
             // ---- KHÁCH HÀNG ----
             if ($this->dn->dangnhapKhachHang($email, $matkhau)) {
-                $this->view('Masterlayout', [
-                    'page' => 'HomeKhachhang_v'
-                ]);
-            } elseif ($this->dn->dangnhapNhanVien($email, $matkhau)) {
-                $this->view('Masterlayout', [
-                    'page' => 'HomeNhanvien_v'
-                ]);
-            } elseif ($this->dn->dangnhapQuanly($email, $matkhau)) {
-                $this->view('Masterlayout', [
-                    'page' => 'HomeNhanvien_v'
-                ]);
-            } else {
+                $sql = "SELECT * FROM khachhang WHERE Email='$email'";
+                $result = mysqli_query($this->dn->con, $sql);
+                $row = mysqli_fetch_assoc($result);
+
+                $_SESSION['user'] = [
+                    'role' => 'khachhang',
+                    'ten' => $row['tenThanhvien'], 
+                    'email' => $row['Email']
+                ];
+
+                header("Location: http://localhost/rapphim/home");
+                exit;
+            }
+
+            // ---- NHÂN VIÊN ----
+            elseif ($this->dn->dangnhapNhanVien($email, $matkhau)) {
+                $sql = "SELECT * FROM nhanvien WHERE Email='$email'";
+                $result = mysqli_query($this->dn->con, $sql);
+                $row = mysqli_fetch_assoc($result);
+
+                $_SESSION['user'] = [
+                    'role' => 'nhanvien',
+                    'ten' => $row['tenNhanvien'], 
+                    'email' => $row['Email']
+                ];
+
+                header("Location: http://localhost/rapphim/home");
+                exit;
+            }
+
+            // ---- QUẢN LÝ ----
+            elseif ($this->dn->dangnhapQuanly($email, $matkhau)) {
+                $sql = "SELECT * FROM quanly WHERE Email='$email'";
+                $result = mysqli_query($this->dn->con, $sql);
+                $row = mysqli_fetch_assoc($result);
+
+                $_SESSION['user'] = [
+                    'role' => 'quanly',
+                    'ten' => $row['tenQuanly'], 
+                    'email' => $row['Email']
+                ];
+
+                header("Location: http://localhost/rapphim/home");
+                exit;
+            }
+
+            // ---- SAI THÔNG TIN ----
+            else {
                 $this->view('space', [
                     'page' => 'Dangnhap_v',
                     'result' => false
