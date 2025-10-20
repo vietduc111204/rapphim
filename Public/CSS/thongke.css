@@ -1,0 +1,140 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #b71c1c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Navigation Buttons */
+.nav-buttons-left {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.nav-buttons-left a button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons-left a button:hover {
+    background-color: #e74c3c;
+}
+
+/* Search & Filter Form */
+.search-add-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-add-container form .input-field,
+.search-add-container form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 180px;
+}
+
+.search-add-container form button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-add-container form button:hover {
+    background-color: #e74c3c;
+}
+
+/* Content Table */
+.content {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #f2f2f2;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+table th {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Action Buttons */
+.btnsua {
+    color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.btnsua:hover {
+    text-decoration: underline;
+    color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-add-container {
+        flex-direction: column;
+    }
+
+    .search-add-container form .input-field,
+    .search-add-container form select {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+}

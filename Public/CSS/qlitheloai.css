@@ -1,0 +1,139 @@
+/* Toàn bộ trang */
+body {
+  background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  padding: 40px;
+  margin: 0;
+}
+
+/* Tiêu đề */
+.title {
+  text-align: center;
+  font-size: 32px;
+  color: #ffcc00;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Nút quay lại */
+.btnQuayLai {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btnQuayLai:hover {
+  background-color: #5a6268;
+}
+
+/* Form thêm/sửa */
+.form-theloai {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Ô nhập tên thể loại */
+.txtTenloai {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 300px;
+  transition: border-color 0.3s ease;
+}
+
+.txtTenloai:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+/* Nút thêm */
+.btnThem {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnThem:hover {
+  background-color: #218838;
+}
+
+/* Nút sửa */
+.btnSua {
+  background-color: #ffc107;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnSua:hover {
+  background-color: #e0a800;
+}
+
+/* Nút xóa */
+.btnXoa {
+  background-color: #dc3545;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnXoa:hover {
+  background-color: #c82333;
+}
+
+/* Bảng danh sách thể loại */
+.table-theloai {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.table-theloai th,
+.table-theloai td {
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-theloai th {
+  background-color: #111;
+  color: #ffcc00;
+  font-size: 16px;
+}
+
+.table-theloai tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-theloai tr:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,184 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #1b1b1b; 
+    color: #eaeaea;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Tiêu đề */
+.title {
+    text-align: center;
+    color: #f9d71c; 
+    margin-bottom: 25px;
+}
+
+/* Nút quay lại */
+.btnQuayLai {
+    text-decoration: none;
+    color: white;
+    background: #2b2d42;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.btnQuayLai:hover {
+    background: #41436a;
+}
+
+/* Khung trắng (card) */
+.card {
+    background: #242424; 
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* Form thêm phim */
+.form-pdc {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f0f0f0;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #333;
+    color: #eee;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #00b4d8;
+    outline: none;
+}
+
+/* Nút thêm phim */
+.btnThem {
+    background: #0077b6;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: fit-content;
+    align-self: flex-end;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btnThem:hover {
+    background: #00b4d8;
+}
+
+/* Bảng danh sách phim */
+.table-pdc {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    color: #f0f0f0;
+}
+
+.table-pdc th {
+    background: #111827; /* Màu header đậm */
+    color: #facc15; /* vàng nhạt */
+    padding: 10px;
+    text-align: center;
+}
+
+.table-pdc td {
+    border-bottom: 1px solid #444;
+    padding: 8px;
+    text-align: center;
+    background: #1e1e1e;
+}
+
+.table-pdc tr:hover td {
+    background: #2a2a2a;
+}
+
+/* Ảnh phim */
+.imgPhim {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.1);
+}
+/* 🌑 Nút hành động sửa & xóa */
+.btnSua, .btnXoa {
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* 🎨 Nút sửa */
+.btnSua {
+    background: linear-gradient(135deg, #3a8ef6, #005bea);
+    box-shadow: 0 2px 8px rgba(58, 142, 246, 0.3);
+}
+.btnSua:hover {
+    background: linear-gradient(135deg, #5aa0ff, #2e7bff);
+    transform: scale(1.05);
+}
+
+/* 🗑️ Nút xóa */
+.btnXoa {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+}
+.btnXoa:hover {
+    background: linear-gradient(135deg, #ff6b5c, #d44c3b);
+    transform: scale(1.05);
+}
+
+/* 🔲 Căn chỉnh cột hành động */
+.table-pdc td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+.message:before {
+    content: "ℹ️ ";
+}
+.message {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffcc00;
+}

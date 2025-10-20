@@ -1,0 +1,137 @@
+body {
+  background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  padding: 40px;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  color: #ffcc00;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btnQuayLai {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btnQuayLai:hover {
+  background-color: #5a6268;
+}
+
+.form-tintuc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.form-tintuc input[type="text"],
+.form-tintuc input[type="date"],
+.form-tintuc textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.form-tintuc textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-tintuc input:focus,
+.form-tintuc textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+.btnThem,
+.btnSua {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnSua {
+  background-color: #ffc107;
+  color: black;
+}
+
+.btnThem:hover {
+  background-color: #218838;
+}
+
+.btnSua:hover {
+  background-color: #e0a800;
+}
+
+.btnXoa {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnXoa:hover {
+  background-color: #c82333;
+}
+
+.table-tintuc {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.table-tintuc th,
+.table-tintuc td {
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-tintuc th {
+  background-color: #111;
+  color: #ffcc00;
+  font-size: 16px;
+}
+
+.table-tintuc tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-tintuc tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-tintuc img {
+  max-width: 100px;
+  border-radius: 4px;
+}

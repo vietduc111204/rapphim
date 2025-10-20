@@ -29,7 +29,7 @@ class Dangnhap extends Controller {
                     'email' => $row['Email']
                 ];
 
-                header("Location: http://localhost/rapphim/home");
+                header("Location: http://localhost/rapphim/homekhachhang");
                 exit;
             }
 
@@ -45,7 +45,7 @@ class Dangnhap extends Controller {
                     'email' => $row['Email']
                 ];
 
-                header("Location: http://localhost/rapphim/home");
+                header("Location: http://localhost/rapphim/homenhanvien");
                 exit;
             }
 
@@ -61,7 +61,7 @@ class Dangnhap extends Controller {
                     'email' => $row['Email']
                 ];
 
-                header("Location: http://localhost/rapphim/home");
+                header("Location: http://localhost/rapphim/homequanly");
                 exit;
             }
 
