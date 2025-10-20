@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Rạp phim</title>
-    <link rel="stylesheet" href="http://localhost/rapphim/Public/CSS/home2.css">
+    <link rel="stylesheet" href="http://localhost/rapphim/Public/CSS/homemaster.css">
 </head>
 <body>
 <header>
     <nav class="navbar">
     <div class="nav-container">
         <ul class="nav-left">
-            <li><a href="#">Phim</a></li>
-            <li><a href="#">Rạp CGV</a></li>
-            <li><a href="#">Tin Mới</a></li>
+            <li><a href="http://localhost/rapphim/">Trang chủ</a></li>
+            <li><a href="http://localhost/rapphim/PhimDangChieu">Phim</a></li>
+            <li><a href="http://localhost/rapphim/TinTuc">Tin Mới</a></li>
             <li><a href="#">Vé & Ưu Đãi</a></li>
             <li><a href="#">Cultureplex</a></li>
         </ul>
